@@ -1,0 +1,40 @@
+/* Base styles */
+
+:root {
+  --clr-dark: #1d1d1f;
+  --clr-medium: #394150;
+  --clr-light: #d2d5da;
+  --clr-lighter: #f3f4f6;
+  --clr-white: #ffffff;
+  --clr-gray: #e5e7eb;
+
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-semibold: 600;
+  --fw-bold: 700;
+}
+
+html {
+  font-family: Inter, sans-serif;
+  font-weight: var(--fw-regular);
+}
+
+h1 {
+  font-size: 1.5rem;
+  font-weight: var(--fw-bold);
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 1rem;
+  font-weight: var(--fw-semibold);
+}
+
+label {
+  font-size: 0.875rem;
+  font-weight: var(--fw-medium);
+}
+

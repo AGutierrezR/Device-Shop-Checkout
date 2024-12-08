@@ -13,98 +13,117 @@
 
     <title>Device Shop Checkout | devChallenges.io</title>
 
-    <!--You are welcome to delete these styles or modify them in your own stylesheet -->
-    <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
 
-      body {
-        height: 100vh;
-      }
-
-      .author-info {
-        font-size: 14px;
-        text-align: center;
-        margin-top: 16px;
-        color: rgb(55, 65, 81);
-      }
-
-      .author-info a {
-        text-decoration: none;
-      }
-    </style>
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/styles.css" />
   </head>
   <body>
-    <!--     
-    Checkout
-    
-    3 items
-    
-    iPhone 12 Pro
-    
-    Golden
-    
-    $999.00
-    
-    x 1
-    
-    Apple Watch
-    
-    Blue
-    
-    $399.00
-    
-    iMac
-    
-    Green
-    
-    $1199.00
-    
-    Enter coupon code
-    
-    Apply Coupon
-    
-    Sub total
-    
-    $2597.00
-    
-    Tax
-    
-    $623.28
-    
-    Total
-    
-    $3220.28
-    
-    Contact Information
-    
-    First & Last name
-    
-    Enter first & last name
-    
-    Email Address
-    
-    Enter email address
-    
-    Country
-    
-    Finland
-    
-    Postal Code
-    
-    00270
-    
-    Continue
-     -->
+    <main>
+      <h1>Checkout <span>3 items</span></h1>
 
-    <div class="author-info">
+      <div class="container">
+        <div>
+          <section aria-label="Cart content" class="summary">
+            <ol class="cart-items" role="list">
+              <li class="cart-item">
+                <div class="cart-item-content">
+                  <div class="cart-item-thumbnail">
+                    <img src="resources/Gold.png" alt="" />
+                  </div>
+                  <div class="cart-item-description">
+                    <h2>Iphone 12 Pro</h2>
+                    <span>Golden</span>
+                  </div>
+                  <span class="cart-item-price">$999.00</span>
+
+                  <div>x1</div>
+                </div>
+              </li>
+              <!--
+              Apple Watch
+              Blue
+
+              $399.00
+
+              iMac
+              Green
+
+              $1199.00
+              -->
+            </ol>
+          </section>
+
+          <hr />
+
+          <aside>
+            <div class="coupon">
+              <form action="post">
+                <input type="text" placeholder="Enter coupon code" />
+                <button type="submit">Apply Coupon</button>
+              </form>
+            </div>
+            <div class="total-summary">
+              <div>
+                <div>Sub total</div>
+                <div>$2597.00</div>
+              </div>
+              <div>
+                <div>Tax</div>
+                <div>$623.28</div>
+              </div>
+              <div>
+                <div>Total</div>
+                <div>$3220.28</div>
+              </div>
+            </div>
+          </aside>
+        </div>
+        <section aria-labelledby="contact-info">
+          <h2 id="contact-info">Contant Information</h2>
+
+          <form action="post">
+            <div>
+              <label for="fullName">First & Last name</label>
+              <input
+                type="text"
+                id="fullName"
+                placeholder="First & Last name"
+              />
+            </div>
+            <div>
+              <label for="email">Email Address</label>
+              <input type="email" id="email" placeholder="Email Address" />
+            </div>
+            <div>
+              <label for="country">Country</label>
+              <input type="text" id="country" placeholder="Country" />
+            </div>
+            <div>
+              <label for="zipcode">Post Code</label>
+              <input
+                type="text"
+                id="zipcode"
+                value="00270"
+                placeholder="Post Code"
+              />
+            </div>
+            <button type="submit">Continue</button>
+          </form>
+        </section>
+      </div>
+    </main>
+
+    <footer class="author-info">
       Coded by <a href="#">Your Name Here</a> | Challenge by
       <a href="https://www.devchallenges.io?ref=challenge" target="_blank"
         >devChallenges.io</a
       >.
-    </div>
+    </footer>
   </body>
 </html>
