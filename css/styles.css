@@ -38,3 +38,56 @@ label {
   font-weight: var(--fw-medium);
 }
 
+input,
+select,
+button,
+textarea {
+  margin: 0;
+  border: 1px solid var(--clr-light);
+  padding-inline: 0.875rem;
+  display: inline-block;
+  vertical-align: middle;
+  white-space: normal;
+  background: none;
+  line-height: 1;
+  display: inline-flex;
+  height: 3.25rem;
+  border-radius: 8px;
+}
+
+button {
+  background: var(--clr-dark);
+  color: var(--clr-white);
+  white-space: nowrap;
+  border: none;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+  text-decoration: none;
+  cursor: pointer;
+  -webkit-font-smoothing: antialiased;
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  padding-inline: 0.875rem;
+  font-weight: var(--fw-semibold);
+}
+
+button:focus-visible {
+  border-color: var(--clr-white)
+}
+
+input {
+  color: var(--clr-medium);
+  border-radius: 8px;
+}
+
+input::placeholder {
+  color: var(--clr-medium);
+}
+
+input[ambient="secondary"] {
+  background-color: var(--clr-lighter);
+}
+
+}
+
