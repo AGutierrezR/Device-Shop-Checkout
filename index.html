@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -16,7 +16,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@500&family=Inter:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
 
@@ -24,108 +24,165 @@
     <link rel="stylesheet" href="css/styles.css" />
   </head>
   <body>
-    <main>
+    <main class="main-content">
       <h1>Checkout <span>3 items</span></h1>
 
-      <div class="container">
-        <div>
+      <div class="wrapper cart-container">
+        <section class="cart-content theme--light">
           <section aria-label="Cart content" class="summary">
-            <ol class="cart-items" role="list">
+            <ol class="cart-items stack" role="list">
               <li class="cart-item">
-                <div class="cart-item-content">
-                  <div class="cart-item-thumbnail">
+                <div class="cart-item-content with-sidebar">
+                  <div class="cart-item-thumbnail sidebar">
                     <img src="resources/Gold.png" alt="" />
                   </div>
-                  <div class="cart-item-description">
-                    <h2>Iphone 12 Pro</h2>
-                    <span>Golden</span>
-                  </div>
-                  <span class="cart-item-price">$999.00</span>
+                  <div class="cart-item-body not-sidebar">
+                    <div class="repel">
+                      <div>
+                        <h2>Iphone 12 Pro</h2>
+                        <span>Golden</span>
+                      </div>
+                      <span class="cart-item-price">$999.00</span>
+                    </div>
 
-                  <div>x1</div>
+                    <div class="repel">
+                      <div class="cart-item-quantity">x1</div>
+
+                      <button type="button" unset>X</button>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="cart-item">
+                <div class="cart-item-content with-sidebar">
+                  <div class="cart-item-thumbnail sidebar">
+                    <img src="resources/Apple-watch.png" alt="" />
+                  </div>
+                  <div class="cart-item-body not-sidebar">
+                    <div class="repel">
+                      <div>
+                        <h2>Apple Watch</h2>
+                        <span>Blue</span>
+                      </div>
+                      <span class="cart-item-price">$399.00</span>
+                    </div>
+
+                    <div class="repel">
+                      <div class="cart-item-quantity">x1</div>
+
+                      <button type="button" unset>X</button>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="cart-item">
+                <div class="cart-item-content with-sidebar">
+                  <div class="cart-item-thumbnail sidebar">
+                    <img src="resources/iMac.png" alt="" />
+                  </div>
+                  <div class="cart-item-body not-sidebar">
+                    <div class="repel">
+                      <div>
+                        <h2>iMac</h2>
+                        <span>Green</span>
+                      </div>
+                      <span class="cart-item-price">$1199.00</span>
+                    </div>
+
+                    <div class="repel">
+                      <div class="cart-item-quantity">x1</div>
+
+                      <button type="button" unset>X</button>
+                    </div>
+                  </div>
                 </div>
               </li>
               <!--
-              Apple Watch
-              Blue
 
-              $399.00
-
-              iMac
-              Green
-
-              $1199.00
               -->
             </ol>
           </section>
 
-          <hr />
+          <hr class="divider" />
 
           <aside>
             <div class="coupon">
-              <form action="post">
-                <input type="text" placeholder="Enter coupon code" />
-                <button type="submit">Apply Coupon</button>
+              <form class="coupon-form with-sidebar" action="post">
+                <input
+                  class="not-sidebar"
+                  type="text"
+                  placeholder="Enter coupon code"
+                />
+                <button class="sidebar" type="submit">Apply Coupon</button>
               </form>
             </div>
             <div class="total-summary">
               <div>
-                <div>Sub total</div>
-                <div>$2597.00</div>
+                <div class="label">Sub total</div>
+                <div class="price">$2597.00</div>
               </div>
               <div>
-                <div>Tax</div>
-                <div>$623.28</div>
+                <div class="label">Tax</div>
+                <div class="price">$623.28</div>
               </div>
-              <div>
-                <div>Total</div>
-                <div>$3220.28</div>
+              <div class="summary-total">
+                <div class="label">Total</div>
+                <div class="price">$3220.28</div>
               </div>
             </div>
           </aside>
-        </div>
-        <section aria-labelledby="contact-info">
+        </section>
+        <section
+          class="theme--white contact-info flow"
+          aria-labelledby="contact-info"
+        >
           <h2 id="contact-info">Contant Information</h2>
 
-          <form action="post">
-            <div>
+          <form class="contact-info-form stack stack--large" action="post">
+            <div class="stack stack--small">
               <label for="fullName">First & Last name</label>
               <input
                 type="text"
+                class="form-control--medium"
                 id="fullName"
                 ambient="secondary"
                 placeholder="Enter first & last name"
               />
             </div>
-            <div>
+            <div class="stack stack--small">
               <label for="email">Email Address</label>
               <input
                 type="email"
+                class="form-control--medium"
                 ambient="secondary"
                 id="email"
                 placeholder="Enter email address"
               />
             </div>
-            <div>
-              <label for="country">Country</label>
-              <input
-                type="text"
-                id="country"
-                ambient="secondary"
-                placeholder="Country"
-              />
+            <div class="two-columns">
+              <div class="stack stack--small">
+                <label for="country">Country</label>
+                <input
+                  type="text"
+                  class="form-control--medium"
+                  id="country"
+                  ambient="secondary"
+                  placeholder="Country"
+                />
+              </div>
+              <div class="stack stack--small">
+                <label for="zipcode">Post Code</label>
+                <input
+                  type="text"
+                  class="form-control--medium"
+                  id="zipcode"
+                  value="00270"
+                  placeholder="Post Code"
+                  ambient="secondary"
+                />
+              </div>
             </div>
-            <div>
-              <label for="zipcode">Post Code</label>
-              <input
-                type="text"
-                id="zipcode"
-                value="00270"
-                placeholder="Post Code"
-                ambient="secondary"
-              />
-            </div>
-            <button type="submit">Continue</button>
+            <button class="form-control--medium" type="submit">Continue</button>
           </form>
         </section>
       </div>
