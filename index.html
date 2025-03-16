@@ -24,11 +24,13 @@
     <link rel="stylesheet" href="css/styles.css" />
   </head>
   <body>
+    <div class="pattern" aria-hidden="true"></div>
+
     <main class="main-content">
-      <h1>Checkout <span>3 items</span></h1>
+      <h1 class="main-title">Checkout <span>3 items</span></h1>
 
       <div class="wrapper cart-container">
-        <section class="cart-content theme--light">
+        <section class="cart-content section--light">
           <section aria-label="Cart content" class="summary">
             <ol class="cart-items stack" role="list">
               <li class="cart-item">
@@ -48,7 +50,11 @@
                     <div class="repel">
                       <div class="cart-item-quantity">x1</div>
 
-                      <button type="button" unset>X</button>
+                      <button type="button" unset>
+                        <svg class="icon icon--cross">
+                          <use xlink:href="#:cross" />
+                        </svg>
+                      </button>
                     </div>
                   </div>
                 </div>
@@ -70,7 +76,11 @@
                     <div class="repel">
                       <div class="cart-item-quantity">x1</div>
 
-                      <button type="button" unset>X</button>
+                      <button type="button" unset>
+                        <svg class="icon icon--cross">
+                          <use xlink:href="#:cross" />
+                        </svg>
+                      </button>
                     </div>
                   </div>
                 </div>
@@ -92,7 +102,11 @@
                     <div class="repel">
                       <div class="cart-item-quantity">x1</div>
 
-                      <button type="button" unset>X</button>
+                      <button type="button" unset>
+                        <svg class="icon icon--cross">
+                          <use xlink:href="#:cross" />
+                        </svg>
+                      </button>
                     </div>
                   </div>
                 </div>
@@ -133,12 +147,12 @@
           </aside>
         </section>
         <section
-          class="theme--white contact-info flow"
+          class="section--white contact-info flow"
           aria-labelledby="contact-info"
         >
           <h2 id="contact-info">Contant Information</h2>
 
-          <form class="contact-info-form stack stack--large" action="post">
+          <form class="stack stack--large" action="post">
             <div class="stack stack--small">
               <label for="fullName">First & Last name</label>
               <input
@@ -162,13 +176,22 @@
             <div class="two-columns">
               <div class="stack stack--small">
                 <label for="country">Country</label>
-                <input
-                  type="text"
-                  class="form-control--medium"
-                  id="country"
-                  ambient="secondary"
-                  placeholder="Country"
-                />
+                <div class="custom-select">
+                  <select
+                    class="form-control--medium"
+                    id="country"
+                    name="country"
+                  >
+                    <option value="finland" selected>Finland</option>
+                    <option value="spain">Spain</option>
+                    <option value="anothercountry">Another country here</option>
+                  </select>
+                  <div class="custom-arrow">
+                    <svg class="icon">
+                      <use xlink:href="#:angle-down" />
+                    </svg>
+                  </div>
+                </div>
               </div>
               <div class="stack stack--small">
                 <label for="zipcode">Post Code</label>
@@ -189,10 +212,29 @@
     </main>
 
     <footer class="author-info">
-      Coded by <a href="#">Your Name Here</a> | Challenge by
+      Coded by <a href="#">Andres Gutierrez</a> | Challenge by
       <a href="https://www.devchallenges.io?ref=challenge" target="_blank"
         >devChallenges.io</a
       >.
     </footer>
+
+    <svg class="sprite">
+      <symbol id=":angle-down" viewBox="0 0 24 24">
+        <path
+          fill="currentColor"
+          d="M17 9.17a1 1 0 0 0-1.41 0L12 12.71L8.46 9.17a1 1 0 0 0-1.41 0a1 1 0 0 0 0 1.42l4.24 4.24a1 1 0 0 0 1.42 0L17 10.59a1 1 0 0 0 0-1.42"
+        />
+      </symbol>
+      <symbol id=":cross" viewBox="0 0 24 24">
+        <path
+          fill="none"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M18 6L6 18M6 6l12 12"
+        />
+      </symbol>
+    </svg>
   </body>
 </html>
